@@ -1,6 +1,6 @@
 import React, { useEffect } from "react";
 import { globalstyles } from "../globalstyles/styles";
-import { View, Text } from "react-native";
+import { View, Text, StyleSheet } from "react-native";
 
 export default function ProductComponent(props){
 
@@ -8,20 +8,30 @@ export default function ProductComponent(props){
     const product = props.route.params.product;
     return(
         <View style={globalstyles.containerStyle}>
-            <Text style={globalstyles.textStyle}>ProductComponent!</Text>
+            <Text style={globalstyles.headerStyle}>Product Details!</Text>
             <View style={globalstyles.containerStyle}>
-                <Text> Product Name : {product.name}</Text>
-                <Text> Product Category : {product.category}</Text>
-                <Text> Product Stock : {product.quantity}</Text>
-                <Text> Product Description : {product.description}</Text>
-                <Text> Product Color : {product.color}</Text>
-                <Text> Product Size : {product.size}</Text>
-                <Text> Product Rating : {product.rating}</Text>
-                <Text> Product Replenisment Value: {product.replenishment_value}</Text>
-                <Text> Product Reorder Value : {product.replenishment_value}</Text>
+                <Text style={styles.detail}> Product Name : {product.name}</Text>
+                <Text style={styles.detail}>Product Category : {product.category}</Text>
+                <Text style={styles.detail}> Product Stock : {product.quantity}</Text>
+                <Text style={styles.detail}> Product Description : {product.description}</Text>
+                <Text style={styles.detail}> Product Color : {product.color}</Text>
+                <Text style={styles.detail}> Product Size : {product.size}</Text>
+                <Text style={styles.detail}> Product Rating : {product.rating}</Text>
+                <Text style={styles.detail}> Product Replenisment Value: {product.replenishment_value}</Text>
+                <Text style={styles.detail}> Product Reorder Value : {product.replenishment_value}</Text>
 
                 
             </View>
         </View>
     )
 }
+
+const styles = StyleSheet.create({
+    main: {
+        margin: 5
+    },
+    detail:{
+        padding:5,
+        fontWeight:500
+    }
+})

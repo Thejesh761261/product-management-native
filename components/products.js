@@ -55,12 +55,12 @@ export default function ContactComponent({navigation}){
     return(
         
         <ScrollView>
-            <View>
+            {/* <View>
             <Text style={globalstyles.textStyle}>Products Details!</Text>
-            </View>
+            </View> */}
             <TextInput style={globalstyles.inputSearchBoxStyle} placeholder="search product" onChangeText={value => search(value)}></TextInput>
             <View>
-        <Button style={{width:"10"}} onPress={() => { navigation.navigate('AddProduct', { id:products[products.length-1].id+1}) }} title="Add Product" />
+        <Button onPress={() => { navigation.navigate('AddProduct', { id:products[products.length-1].id+1}) }} title="Add Product"  />
         </View>
             {
             products.map(p=>{

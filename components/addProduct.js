@@ -185,7 +185,6 @@ export default function AddProductComponent(props){
           .then(response => {
             if (response.status === 201) {
                 setAddSuccess(true)
-              props.route.params.addProducts(prodObj);
               alert('Product Added')
               props.navigation.pop()
             }
@@ -198,7 +197,7 @@ export default function AddProductComponent(props){
     }
     return (<View style={globalstyles.containerStyle}>
         <ScrollView>
-      <Text style={globalstyles.headerStyle}>Add Product</Text> 
+      {/* <Text style={globalstyles.headerStyle}>Add Product</Text>  */}
 
       <Text style={(addSuccess=== true ? globalstyles.success : globalstyles.hidden)}>Add Success</Text>
   
@@ -254,10 +253,12 @@ export default function AddProductComponent(props){
         <Picker.Item label="Men" value="Men" />
         <Picker.Item label="Women" value="Women" />
       </Picker>
-  
+        
       <TouchableOpacity>
         <Text style={globalstyles.addProd} onPress={addProduct}>Add Product</Text>
       </TouchableOpacity>
+      <Text style={(addSuccess=== true ? globalstyles.success : globalstyles.hidden)}>Product Added Successfully</Text>
+  
       </ScrollView>
   
     </View>);
