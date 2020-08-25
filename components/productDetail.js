@@ -21,11 +21,11 @@ export default function ProductComponent(props){
                 <Text style={styles.detail}> <b>Product Rating :</b> {product.rating}</Text>
                 <Text style={styles.detail}> <b>Product Replenisment Value:</b> {product.replenishment_value}</Text>
                 <Text style={styles.detail}> <b>Product Reorder Value :</b> {product.replenishment_value}</Text>
-                </ScrollView>
-                {/* <View style={styles.buttons}>
-                <Button style={styles.bt1} title="Edit" />
+                <View style={styles.buttons}>
+                <Button title="Edit" />
                 <Button title="Delete" />
-                </View> */}
+                </View>
+                </ScrollView>
                 
             </View>
         </View>
@@ -55,7 +55,9 @@ const styles = StyleSheet.create({
 
     },
     buttons:{
-        display:'inline'
+        
+        flexDirection: 'row',
+        justifyContent: 'space-around',
     },
     bt1:{
         width:10,
