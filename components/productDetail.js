@@ -8,7 +8,7 @@ export default function ProductComponent(props){
     console.log(props.route.params.product);
     const product = props.route.params.product;
     return(
-        <View style={styles.container}>
+        <View style={styles.card}>
             <Text style={styles.header}><b>Product Details of {product.name}!</b></Text>
             <View style={globalstyles.containerStyle}>
                 <ScrollView>
@@ -46,7 +46,7 @@ const styles = StyleSheet.create({
     },
     header:{
         fontSize:20,
-        color:'#DAA520'
+        color:'purple'
     },
     container:{
         padding: 20,
@@ -62,6 +62,15 @@ const styles = StyleSheet.create({
     bt1:{
         width:10,
         display:'inline'
-    }
+    },
+    card: {
+        borderWidth: 3,
+        borderColor: 'grey',
+        padding: 10,
+       marginTop:10,
+       marginBottom:10,
+       elevation: 5,
+       backgroundColor:"#fff"
+      }
 
 })

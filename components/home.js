@@ -12,7 +12,7 @@ export default function HomeComponent({navigation}){
 
     return(
         <View style={globalstyles.containerStyle}>
-            <Text style={globalstyles.textStyle}>I am at home!</Text>
+            {/* <Text style={globalstyles.textStyle}>I am at home!</Text> */}
             <TouchableOpacity style={globalstyles.touchButtonContainer}
                               onPress={()=>{navigation.navigate('Contact')}}      >
                 <Text>Contact Us</Text>

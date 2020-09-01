@@ -6,6 +6,7 @@ import Home from '../components/home';
 import { useIsFocused } from "@react-navigation/native";
 import { TouchableOpacity, ScrollView } from "react-native-gesture-handler";
 
+
 export default function ContactComponent({navigation}){
 
     const [products,setProducts] = useState([]);
@@ -65,12 +66,16 @@ export default function ContactComponent({navigation}){
             {
             products.map(p=>{
                 return (
-                    <View key={p.id} style={globalstyles.containerStyle}>
+                   
                     <TouchableOpacity onPress={() => { navigation.navigate('Product', { product: p }) }}>
-                      <Text style={mystyles.listitem}>{p.name}</Text>
-                      {/* <Text style={mystyles.listitem}>{p.unitPrice}</Text> */}
-                    </TouchableOpacity>
+                    <View key={p.id} style={mystyles.card} >
+                    
+                      <Text style={mystyles.listitem1}>{p.name}</Text>
+                      <Text style={mystyles.listitem2}>Unit Price: {p.unitPrice}</Text>
                     </View>
+                    </TouchableOpacity>
+                   
+                   
             )
             })
         
@@ -87,11 +92,30 @@ const mystyles = StyleSheet.create({
       //alignItems:'center',
       //justifyContent:'center'
     },
-    listitem:{
+    listitem1:{
       marginTop:20,
       fontSize:30,
-      backgroundColor:'goldenrod',
-      padding:20,
+      padding:10,
       color:'purple'
-    }
+    },
+    listitem2:{
+        marginTop:10,
+        fontSize:20,
+        padding:10,
+        color:'purple'
+      },
+    containerStyle:{
+        backgroundColor:'goldenrod',
+        margin:15,
+        padding:10,
+
+    },
+    card: {
+        borderWidth: 3,
+        borderColor: 'grey',
+        padding: 10,
+       margin:10,
+       elevation: 5,
+       backgroundColor:"white"
+      }
   })

@@ -19,6 +19,7 @@
     "react-native": "https://github.com/expo/react-native/archive/sdk-38.0.2.tar.gz",
     "react-native-gesture-handler": "^1.7.0",
     "react-native-screens": "~2.9.0",
+    "react-native-shadow-cards": "^1.0.2",
     "react-native-web": "~0.11.7"
   },
   "devDependencies": {

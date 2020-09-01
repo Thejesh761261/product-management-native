@@ -10,6 +10,7 @@ import ProductsComponent from '../components/products';
 import ProductComponent from '../components/productDetail';
 import AddProductComponent from '../components/addProduct';
 import DashboardComponent from '../components/dashboard';
+import LoginComponent from '../components/login';
 
 const Stack = createStackNavigator()
 
@@ -17,12 +18,16 @@ const Stack = createStackNavigator()
 function MyStackNavigator(){
     return (
         <NavigationContainer>
-            <Stack.Navigator initialRouteName='Home' 
+            <Stack.Navigator initialRouteName='Inventory' 
              screenOptions={{
                 gestureEnabled:true,
                 headerStyle:{
                     backgroundColor:'wheat',
                     height:100
+                },
+                headerTitleStyle:{
+                    fontWeight:'bold',
+                    fontFamily:'my-custom-font'
                 }
                 }} 
                            
@@ -34,6 +39,7 @@ function MyStackNavigator(){
                 <Stack.Screen name="Product" component={ProductComponent}></Stack.Screen>
                 <Stack.Screen name="AddProduct" component={AddProductComponent}></Stack.Screen>
                 <Stack.Screen name="Dashboard" component={DashboardComponent}></Stack.Screen>
+                <Stack.Screen name="Inventory" component={LoginComponent}></Stack.Screen>
             </Stack.Navigator>
         </NavigationContainer>
     )

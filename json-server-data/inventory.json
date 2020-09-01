@@ -273,9 +273,9 @@
       {
         "id": 30,
         "name": "Chennai Silks",
-        "price": "245",
+        "price": 245,
         "category": "Sarees",
-        "quantity": "23",
+        "quantity": 23,
         "code": "CHN234",
         "idealFor": "Women",
         "vendor": "Chela Sarees",
@@ -423,47 +423,23 @@
     ],
     "login": [
       {
-        "id": 1,
-        "email": "thejesh@gmail.com",
+        "id": "thejesh@gmail.com",
         "password": "ths",
         "name": "Thejesh K",
         "dob": "12-07-2017",
         "phone": "9897656789"
       },
       {
-        "email": "thejesh@gmail.com",
+        "id": "thejesh@gmail.com",
         "password": "thejesh",
         "name": "Thejesh Kanuparthi",
-        "dob": "2020-08-11",
-        "id": 2
+        "dob": "2020-08-11"
       },
       {
-        "email": "thsths@gmail.com",
-        "password": "thsths",
-        "name": "Thej K",
-        "dob": "2020-06-11",
-        "id": 4
-      },
-      {
-        "email": "thejeshh@gmail.com",
-        "password": "thejesh",
-        "name": "Thejesh K",
-        "dob": "2019-07-04",
-        "id": 5
-      },
-      {
-        "email": "thejesh@gmail.com",
-        "password": "thejesh19",
+        "id": "ths",
+        "password": "ths",
         "name": "Thejesh Kanuparthi",
-        "dob": "2020-03-11",
-        "id": 6
-      },
-      {
-        "email": "thejesh@gmail.com",
-        "password": "thejesh19",
-        "name": "Thejesh Kanuparthi",
-        "dob": "2020-03-11",
-        "id": 7
+        "dob": "2020-08-11"
       }
     ]
   }
